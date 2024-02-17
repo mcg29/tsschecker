@@ -1141,6 +1141,11 @@ getID0:
     if (tss_request_add_common_tags(tssreq, tssparameter, NULL) < 0) {
         reterror("[TSSR] ERROR: Unable to add common tags to TSS request\n");
     }
+
+    printf("Cryptex Magic...\n");
+    if (tss_request_add_cryptex_tags(tssreq, tssparameter, NULL) < 0){
+        reterror("[TSSR] ERROR: Unable to add Cryptex tags to TSS Request\n");
+    }
     
     if (tss_request_add_ap_tags(tssreq, tssparameter, NULL) < 0) {
         reterror("[TSSR] ERROR: Unable to add common tags to TSS request\n");
