@@ -423,7 +423,7 @@ int main(int argc, const char * argv[]) {
     }
     if((flags & FLAG_SAVE_CRYPTEX_NONCE) == FLAG_SAVE_CRYPTEX_NONCE) {
       if(!(flags & FLAG_SAVE_CRYPTEX_SEED)) {
-        reterror(-7, "[TSSC] Cryptex seed is required for saving Cryptex1 blobs\n");
+        printf("[TSSC]  Saving Cryptex1 blobs without Cryptex seed. You must dump your seeds later!\n");
       }
     }
     if((flags & FLAG_SAVE_CRYPTEX_SEED) == FLAG_SAVE_CRYPTEX_SEED) {
