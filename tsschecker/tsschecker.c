@@ -286,6 +286,9 @@ static struct bbdevice bbdevices[] = {
     {"iPhone18,2", 694094470, 8},    // iPhone 17 Pro Max
     {"iPhone18,4", 4, 0},            // iPhone Air
     {"iPhone18,5", 4, 0},            // iPhone 17e
+    {"iPhone19,2", 4, 0},            // iPhone 18 Pro
+    {"iPhone19,3", 694094470, 8},    // iPhone 18 Pro Max (US)
+    {"iPhone19,7", 4, 0},            // iPhone 18 Pro Max (International)
 
     // iPads
     {"iPad1,1",    0, 0},            // iPad (1st gen)
@@ -458,6 +461,11 @@ static struct bbdevice bbdevices[] = {
     {"Watch7,18",  0, 0},            // Apple Watch Series 11 (46mm, GPS)
     {"Watch7,19",  0, 0},            // Apple Watch Series 11 (42mm, GPS + Cellular)
     {"Watch7,20",  0, 0},            // Apple Watch Series 11 (46mm, GPS + Cellular)
+    {"Watch8,1",  0, 0},             // Apple Watch Ultra 4 (49mm, GPS + Cellular)
+    {"Watch8,2",  0, 0},             // Apple Watch Series 12 (42mm, GPS)
+    {"Watch8,3",  0, 0},             // Apple Watch Series 12 (46mm, GPS)
+    {"Watch8,4",  0, 0},             // Apple Watch Series 12 (42mm, GPS + Cellular)
+    {"Watch8,5",  0, 0},             // Apple Watch Series 12 (46mm, GPS + Cellular)
 
     // HomePods
     {"AudioAccessory1,1",   0, 0},   // HomePod 1st gen
@@ -1591,7 +1599,7 @@ int isManifestBufSignedForDevice(char *buildManifestBuffer, t_devicevals *devVal
                                         || !strcasecmp(devVals->deviceBoard, "d93ap") || !strcasecmp(devVals->deviceBoard, "d94ap")
                                         || !strcasecmp(devVals->deviceBoard, "d47ap") || !strcasecmp(devVals->deviceBoard, "d48ap")
                                         || !strcasecmp(devVals->deviceBoard, "v53ap") || !strcasecmp(devVals->deviceBoard, "v54ap")
-                                        || !strcasecmp(devVals->deviceBoard, "v57ap")
+                                        || !strcasecmp(devVals->deviceBoard, "v57ap") || !strcasecmp(devVals->deviceBoard, "v64ap")
                                         || !strcasecmp(devVals->deviceBoard, "n102ap") || !strcasecmp(devVals->deviceBoard, "j71ap")
                                         || !strcasecmp(devVals->deviceBoard, "j72ap") || !strcasecmp(devVals->deviceBoard, "j73ap")
                                         || !strcasecmp(devVals->deviceBoard, "j85ap") || !strcasecmp(devVals->deviceBoard, "j86ap")
@@ -1615,7 +1623,7 @@ int isManifestBufSignedForDevice(char *buildManifestBuffer, t_devicevals *devVal
                                         || !strcasecmp(devVals->deviceModel, "iPhone17,1") || !strcasecmp(devVals->deviceModel, "iPhone17,2")
                                         || !strcasecmp(devVals->deviceModel, "iPhone17,3") || !strcasecmp(devVals->deviceModel, "iPhone17,4")
                                         || !strcasecmp(devVals->deviceModel, "iPhone18,1") || !strcasecmp(devVals->deviceModel, "iPhone18,2")
-                                        || !strcasecmp(devVals->deviceModel, "iPhone18,3")
+                                        || !strcasecmp(devVals->deviceModel, "iPhone18,3") || !strcasecmp(devVals->deviceModel, "iPhone19,3")
                                         || !strcasecmp(devVals->deviceModel, "iPod7,1") || !strcasecmp(devVals->deviceModel, "iPad4,1")
                                         || !strcasecmp(devVals->deviceModel, "iPad4,2") || !strcasecmp(devVals->deviceModel, "iPad4,3")
                                         || !strcasecmp(devVals->deviceModel, "iPad4,4") || !strcasecmp(devVals->deviceModel, "iPad4,5")
